@@ -1,0 +1,10 @@
+.homeFooter{
+  background: url('../assets/botWawe.gif');
+  height: 326px;
+  min-height: 30%;
+  min-width: 100px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
