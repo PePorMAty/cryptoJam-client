@@ -14,7 +14,7 @@ const Home = () => {
             </h1>
             <p className={s.text}>
               Enjoy better rates when you trade your bitcoin with{" "}
-              <span>waves</span>
+              <span>CryptoJam</span>
             </p>
             <button className={s.btn}>Get Started</button>
           </div>

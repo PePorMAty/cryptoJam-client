@@ -17,6 +17,23 @@ footer{
   flex: 0 0 auto;
   margin-top: auto;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+  /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: inherit;
+  /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #272a2a;
+  /* цвет плашки */
+  border-radius: 30px;
+  /* закругления плашки */
+  
+}
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -29,7 +46,7 @@ body {
 
 .container{
   margin: 0 auto;
-  max-width: 1690px;
+  max-width: 1280px;
   padding: 0 15px;
 }
 /* .top-wawe {

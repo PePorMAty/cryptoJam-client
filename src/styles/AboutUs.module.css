@@ -1,3 +1,62 @@
 .aboutUs{
+  margin-top: 156px;
+}
+.wrapper {
+  background: rgba(39, 42, 42, 0.192);
+  background: radial-gradient(at var(--x,100px) var(--y, 100px), #272a2a,
+    #141414);
+  backdrop-filter: blur(10px);
+  height: 400px;
+  max-width: 1160px;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  padding: 30px 50px;
+  
+}
+.gradientBorder {
+  --border-width: 2px;
 
+  position: relative;
+  height: 462px;
+  max-width: 1262px;
+  width: 100%;
+  background: #222;
+  border-radius: 30px;
+  
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg,
+    
+   
+    /* hsl(270, 87%, 48%),hsl(0, 0%, 8%)); */
+    
+        hsl(224, 85%, 66%),
+        hsl(269, 85%, 66%),
+        hsl(314, 85%, 66%),
+        hsl(359, 85%, 66%),
+        hsl(44, 85%, 66%),
+        hsl(89, 85%, 66%),
+        hsl(134, 85%, 66%),
+        hsl(179, 85%, 66%));
+       /*  #141414,
+        #7A10E3 */
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+    border-radius: 30px;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
 }
