@@ -23,9 +23,10 @@ const CoinsSlider = () => {
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 1000,
-    cssEase: "linear",
+    speed: 1200,
+    autoplaySpeed: 1200,
+    cssEase: "cubic-bezier(0.0, 0.0, 1.0, 1.0)",
+    pauseOnHover: false,
   };
 
   return (

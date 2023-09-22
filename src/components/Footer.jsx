@@ -4,7 +4,6 @@ import s from "../styles/Footer.module.css";
 
 const Footer = () => {
   const params = useLocation();
-  console.log(params);
   if (params.pathname === "/") {
     return <div className={s.homeFooter}></div>;
   }

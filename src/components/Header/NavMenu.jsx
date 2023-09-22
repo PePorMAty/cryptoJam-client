@@ -17,6 +17,11 @@ const NavMenu = () => {
           </Link>
         </li>
         <li className={s.list}>
+          <Link to="/faq" className={s.link}>
+            <p className={s.listItem}>FAQ</p>
+          </Link>
+        </li>
+        <li className={s.list}>
           <Link to="/" className={s.link}>
             <p className={s.listItem}>Support</p>
           </Link>
