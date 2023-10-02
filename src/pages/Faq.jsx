@@ -45,8 +45,6 @@ const Faq = () => {
     setIsOpen(i);
   };
 
-  const handleSetIsActive = (e) => {};
-
   return (
     <div className={s.faq}>
       <Container>
@@ -66,21 +64,6 @@ const Faq = () => {
             </p>
           </div>
         ))}
-        {/*     <div className={s.wrapper} id={1}>
-          <div className={s.listItem}>
-            <p className={s.question}>dsad</p>
-            <span
-              onClick={(e) => handleSetIsActive(e)}
-              className={s.plus}
-              id="1"
-            >
-              {isOpen ? "-" : "+"}
-            </span>
-          </div>
-          <p className={isOpen ? `${s.answer} ${s.active}` : `${s.answer}`}>
-            dsa
-          </p>
-        </div> */}
       </Container>
     </div>
   );

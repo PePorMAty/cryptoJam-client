@@ -12,7 +12,7 @@ const NavMenu = () => {
           </Link>
         </li>
         <li className={s.list}>
-          <Link to="/" className={s.link}>
+          <Link to="/news" className={s.link}>
             <p className={s.listItem}>News</p>
           </Link>
         </li>
