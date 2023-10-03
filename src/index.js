@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import { ConfigProvider, theme } from "antd";
+import Auth from "./store/slices/Auth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,7 +24,9 @@ root.render(
     >
       <BrowserRouter>
         <React.StrictMode>
-          <App />
+          <Auth>
+            <App />
+          </Auth>
         </React.StrictMode>
       </BrowserRouter>
     </ConfigProvider>

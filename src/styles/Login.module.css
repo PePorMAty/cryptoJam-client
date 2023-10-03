@@ -50,7 +50,7 @@
 
 .btn {
   border-radius: 10px;
-  background: linear-gradient(0.25turn, #18C8FF, #933FFE);
+  background: linear-gradient(0.25turn, #307e96, #933FFE);
   padding: 12px 22px;
   color: #f5f5f5;
   font-size: 16px;
@@ -69,4 +69,7 @@
 }
 .tpText{
   font-size: 16px;
+}
+.error{
+  margin-top: 20px;
 }

@@ -45,7 +45,7 @@
   padding: 0 15px;
 }
 .auth{
-  background-color: #8859EC;
+  background: linear-gradient(0.25turn, #307e96, #933FFE);
   border-radius: 5px;
   padding: 6px 30px;
   text-align: center;
@@ -54,5 +54,5 @@
   transition: all 0.3s ease;
 }
 .auth:hover{
-  background-color: #743cec;
+  opacity: 0.8;
 }

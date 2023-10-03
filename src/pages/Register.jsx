@@ -66,7 +66,7 @@ const Register = () => {
             </label>
             <PasswordInput
               type="password"
-              name="password"
+              name="confirmPassword"
               placeholder={"Confirm your Password"}
               className={s.loginInput}
             />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "../components/Container";
 import NewsItem from "../components/News/NewsItem";
-import { useGetCryptoNewsQuery } from "../store/cryptoNewsApi";
+import { useGetCryptoNewsQuery } from "../store/api/cryptoNewsApi";
 import SearchNewsCoins from "../components/News/SearchNewsCoins";
 import s from "../styles/News.module.css";
 

@@ -1,13 +1,16 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 import Routers from "./components/Routers";
 import "./index.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { useSelector } from "react-redux";
 
 function App() {
   const { pathname } = useLocation();
+  const { isAuthenticated } = useSelector((state) => state.auth);
+
   switch (pathname) {
     case "/login":
       return <Login />;
@@ -16,19 +19,29 @@ function App() {
     default:
       return (
         <>
-          <>
-            <div className="App">
-              <header>
-                <Header />
-              </header>
-              <main>
-                <Routers />
-              </main>
-            </div>
-            <footer>
-              <Footer />
-            </footer>
-          </>
+          {isAuthenticated ? (
+            <>
+              <div className="App">
+                <header>header</header>
+                <main>isAuthenticated</main>
+              </div>
+              <footer>footer</footer>
+            </>
+          ) : (
+            <>
+              <div className="App">
+                <header>
+                  <Header />
+                </header>
+                <main>
+                  <Routers />
+                </main>
+              </div>
+              <footer>
+                <Footer />
+              </footer>
+            </>
+          )}
         </>
       );
   }
