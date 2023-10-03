@@ -1,0 +1,72 @@
+.login{
+  background: #0B0B0F;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position:  left bottom;
+  /* background-size: contain; */
+}
+.loginWrapper{
+  margin-top: 221px;
+  max-width: 578px;
+  width: 100%;
+  float: right;
+}
+.registerWrapper{
+  margin-top: 138px;
+  max-width: 578px;
+  width: 100%;
+  float: right;
+}
+.formTitle{
+  display: flex;
+  margin-bottom: 50px;
+}
+.formLogo{
+  max-width: 54px;
+  height: 54px;
+  width: 100%;
+}
+.loginTitle{
+  margin: auto 0 auto 20px;
+}
+.labelInput{
+  color: #fff;
+  margin-bottom: 17px;
+  font-size: 18px;
+  display: inline-block;
+}
+.loginBottomWrapper{
+  display: flex;
+  flex-direction: column;
+}
+.loginLink{
+  font-size: 16px;
+  transition: all ease 0.7s;
+  margin-bottom: 50px;
+}
+.loginLink:hover{
+  color: #fff;
+}
+
+.btn {
+  border-radius: 10px;
+  background: linear-gradient(0.25turn, #18C8FF, #933FFE);
+  padding: 12px 22px;
+  color: #f5f5f5;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all .5s ease;
+  float: right;
+  max-width: 100px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:active{
+  opacity: 0.2;
+}
+.tpText{
+  font-size: 16px;
+}
