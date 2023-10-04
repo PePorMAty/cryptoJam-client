@@ -1,0 +1,49 @@
+.navbar{
+  margin-right: 30px;
+  float: left;
+  max-width: 233px;
+  width: 100%;
+  
+}
+.navLink{
+  display: flex;
+  padding: 16px 0px 16px 16px;
+  width: 100%;
+  max-width: 233px;
+  margin-bottom: 36px;
+}
+.activeLink{
+  border-radius: 16px;
+  background: linear-gradient(101deg, #1F8EBE -5.36%, #440495 29.46%, #440495 56.03%, #B102CD 81.92%);
+}
+.navIcon{
+  margin-right: 19px;
+}
+.navText{
+  margin: auto 0;
+}
+.logOut{
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.logOut:hover{
+  opacity: 0.8;
+}
+.logOutIcon{
+  width: 24px;
+  height: 24px;
+  margin-right: 19px;
+}
+.logOutText{
+ 
+  color: #fff;
+  font-size: 18px;
+  margin: auto 0;
+}
+.nav{
+  min-height: 708px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

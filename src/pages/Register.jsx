@@ -10,13 +10,11 @@ import LoginLogo from "../assets/LoginLogo.png";
 import ErrorMessage from "../components/ErrorMessage";
 import { useRegisterMutation } from "../store/services/auth";
 import { isErrorWithMessage } from "../utils/isErrorWithMessage";
-import { useSelector } from "react-redux";
 
 const Register = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [registerUser] = useRegisterMutation();
-  const { isAuthenticated } = useSelector((state) => state.auth);
 
   const register = async (data) => {
     try {

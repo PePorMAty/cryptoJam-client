@@ -1,44 +1,29 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 import Routers from "./components/Routers";
-import "./index.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { useSelector } from "react-redux";
+import AuthorizedApp from "./pages/authorizedPages/AuthorizedApp";
+
+import "./index.css";
 
 function App() {
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   switch (pathname) {
     case "/login":
       if (isAuthenticated) {
-        return (
-          <>
-            <div className="App">
-              <header>header</header>
-              <main>isAuthenticated</main>
-            </div>
-            <footer>footer</footer>
-          </>
-        );
+        return <AuthorizedApp />;
       } else {
         return <Login />;
       }
 
     case "/register":
       if (isAuthenticated) {
-        return (
-          <>
-            <div className="App">
-              <header>header</header>
-              <main>isAuthenticated</main>
-            </div>
-            <footer>footer</footer>
-          </>
-        );
+        return <AuthorizedApp />;
       } else {
         return <Register />;
       }
@@ -46,13 +31,7 @@ function App() {
       return (
         <>
           {isAuthenticated ? (
-            <>
-              <div className="App">
-                <header>header</header>
-                <main>isAuthenticated</main>
-              </div>
-              <footer>footer</footer>
-            </>
+            <AuthorizedApp />
           ) : (
             <>
               <div className="App">

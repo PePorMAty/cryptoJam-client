@@ -1,0 +1,35 @@
+.header{
+  margin-top: 40px;
+  margin-bottom: 23px;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  display: flex;
+}
+.logoImg{
+  width: 30px;
+  height: 30px;
+}
+.logoTitle{
+  margin: auto 0;
+  font-size: 24px;
+  margin-left: 8px;
+}
+.profile{
+  display: flex;
+}
+.name{
+  font-size: 18px;
+  margin: auto 24px auto 0;
+  cursor: pointer;
+}
+.avatar{
+  max-width: 48px;
+  width: 100%;
+  border-radius: 30px;
+  height: 48px;
+  cursor: pointer;
+}
