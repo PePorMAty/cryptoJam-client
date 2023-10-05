@@ -25,6 +25,10 @@
   font-size: 18px;
   margin: auto 24px auto 0;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.name:hover{
+  opacity: 0.8;
 }
 .avatar{
   max-width: 48px;

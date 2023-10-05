@@ -1,10 +1,12 @@
 import React from "react";
-import s from "../../styles/authorizedStyles/Navbar.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import dashboardIcon from "../../assets/AuthorizedPages/dasboardIcon.svg";
-import logoutIcon from "../../assets/AuthorizedPages/logoutIcon.svg";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/slices/authSlice";
+import dashboardIcon from "../../assets/AuthorizedPages/navIcons/dasboardIcon.svg";
+import logoutIcon from "../../assets/AuthorizedPages/navIcons/logoutIcon.svg";
+import withdrawIcon from "../../assets/AuthorizedPages/navIcons/withdraw.svg";
+import profileIcon from "../../assets/AuthorizedPages/navIcons/profile.svg";
+import s from "../../styles/authorizedStyles/Navbar.module.css";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -20,38 +22,46 @@ const Navbar = () => {
       <nav className={s.nav}>
         <ul className={s.navList}>
           <li className={s.navItem}>
-            <Link to={"/dashboard"} className={`${s.navLink} `}>
+            <NavLink
+              to={"/dashboard"}
+              className={({ isActive }) =>
+                isActive ? `${s.activeLink}` : `${s.navLink}`
+              }
+            >
               <img
                 className={s.navIcon}
                 src={dashboardIcon}
                 alt="dashboardIcon"
               />
               <p className={s.navText}>Dashboard</p>
-            </Link>
-            <Link to={"/"} className={`${s.navLink} ${s.activeLink}`}>
-              <img
-                className={s.navIcon}
-                src={dashboardIcon}
-                alt="dashboardIcon"
-              />
-              <p className={s.navText}>WithDraw</p>
-            </Link>
-            <Link to={"/"} className={`${s.navLink} `}>
-              <img
-                className={s.navIcon}
-                src={dashboardIcon}
-                alt="dashboardIcon"
-              />
-              <p className={s.navText}>Deposits</p>
-            </Link>
-            <Link to={"/"} className={`${s.navLink} `}>
-              <img
-                className={s.navIcon}
-                src={dashboardIcon}
-                alt="dashboardIcon"
-              />
-              <p className={s.navText}>Settings</p>
-            </Link>
+            </NavLink>
+            <NavLink
+              to={"/withdraw"}
+              className={({ isActive }) =>
+                isActive ? `${s.activeLink}` : `${s.navLink}`
+              }
+            >
+              <img className={s.navIcon} src={withdrawIcon} alt="withdraw" />
+              <p className={s.navText}>Withdraw</p>
+            </NavLink>
+            <NavLink
+              to={"/calculator"}
+              className={({ isActive }) =>
+                isActive ? `${s.activeLink}` : `${s.navLink}`
+              }
+            >
+              <img className={s.navIcon} src={dashboardIcon} alt="calculator" />
+              <p className={s.navText}>Calculator</p>
+            </NavLink>
+            <NavLink
+              to={"/profile"}
+              className={({ isActive }) =>
+                isActive ? `${s.activeLink}` : `${s.navLink}`
+              }
+            >
+              <img className={s.navIcon} src={profileIcon} alt="profile" />
+              <p className={s.navText}>Profile</p>
+            </NavLink>
           </li>
         </ul>
         <div className={s.logOut} onClick={onLogoutClick}>

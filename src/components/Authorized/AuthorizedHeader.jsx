@@ -1,8 +1,9 @@
 import React from "react";
 import s from "../../styles/authorizedStyles/authorizedHeader.module.css";
-import AuthorizedContainer from "../../components/Authorized/AuthorizedContainer";
+import AuthorizedContainer from "./AuthorizedContainer";
 import logo from "../../assets/AuthorizedPages/authLogo.png";
 import avatar from "../../assets/AuthorizedPages/avatar.jpg";
+import { Link } from "react-router-dom";
 
 const AuthorizedHeader = () => {
   return (
@@ -13,10 +14,10 @@ const AuthorizedHeader = () => {
             <img className={s.logoImg} src={logo} alt="logo" />
             <p className={s.logoTitle}>CryptoJam</p>
           </div>
-          <div className={s.profile}>
+          <Link to={"/profile"} className={s.profile}>
             <p className={s.name}>Name</p>
             <img className={s.avatar} src={avatar} alt="avatar" />
-          </div>
+          </Link>
         </div>
       </AuthorizedContainer>
     </header>
