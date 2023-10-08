@@ -1,11 +1,24 @@
 .coinsChart{
   margin-right: 30px;
   margin-bottom: 30px;
-  max-width: 673px;
+  max-width: 773px;
   width: 100%;
   background: rgba(28, 28, 28, 0.6);
   backdrop-filter: blur(10px);
   min-height: 513px;
   padding: 40px;
   border-radius: 16px;
+  /* color: #600cce; */
+}
+.lineChart{
+  margin-bottom: 30px;
+}
+.radioBtnGroup{
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.88);
+}
+.selectCoin{
+  margin-right: 50px;
+  margin-bottom: 50px;
 }
