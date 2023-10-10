@@ -10,6 +10,43 @@
   border-radius: 16px;
   /* color: #600cce; */
 }
+.chartStats{
+  margin-bottom: 50px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+.statsImg {
+  border-radius: 13.754px;
+  background: rgba(176, 176, 176, 0.10);
+  width: 60px;
+  padding: 14px 0 14px 0;
+  margin-right: 12px;
+}
+
+.statsIcon {
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.statsTitle {
+  font-size: 14px;
+}
+
+.statsItem {
+  display: flex;
+}
+
+.statsTitle {
+  margin: 0;
+}
+
+.statsResult {
+  font-size: 24px;
+}
 .lineChart{
   margin-bottom: 30px;
 }
@@ -18,7 +55,29 @@
   justify-content: center;
   color: rgba(255, 255, 255, 0.88);
 }
+.selectWrapper{
+  display: flex;
+}
 .selectCoin{
-  margin-right: 50px;
-  margin-bottom: 50px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  max-width: 93px;
+  width: 100%;
+}
+.coinIcon{
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+}
+.selectWrapper{
+  
+}
+.coinPriceWrapper{
+  display: flex;
+}
+.currentPrice{
+  margin: 0;
+  font-size: 22px;
 }

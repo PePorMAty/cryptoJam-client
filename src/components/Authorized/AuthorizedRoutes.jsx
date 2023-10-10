@@ -5,7 +5,7 @@ import Dashboard from "../../pages/authorizedPages/Dashboard";
 const AuthorizedRoutes = () => {
   return (
     <Routes>
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/" element={<Dashboard />} />
     </Routes>
   );
 };

@@ -9,7 +9,6 @@ import {
   useGetCryptosQuery,
 } from "../../store/api/cryptoApi";
 import s from "../../styles/authorizedStyles/Dashboard.module.css";
-import { Select } from "antd";
 
 const radioOptions = [
   { label: "3h", value: "3h" },
@@ -20,15 +19,17 @@ const radioOptions = [
   { label: "1y", value: "1y" },
   { label: "3y", value: "3y" },
   { label: "5y", value: "5y" },
+  { label: "All", value: "all" },
 ];
 
 const Dashboard = () => {
-  /* const coinId = "Qwsogvtv82FCd"; */
   const [timePeriod, setTimePeriod] = useState("5y");
   const [coinId, setCoinId] = useState("Qwsogvtv82FCd");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const cryptoDetails = data?.data?.coin;
-  const { data: coinHistory } = useGetCryptoHistoryQuery({
+  const {
+    data: coinHistory,
+    isFetching: { coinHistoryFetching },
+  } = useGetCryptoHistoryQuery({
     coinId,
     timePeriod,
   });
@@ -36,11 +37,11 @@ const Dashboard = () => {
     data: coinsData,
     isFetching: { isFetchingCoins },
   } = useGetCryptosQuery(100);
+  const cryptoDetails = data?.data?.coin;
   const currentPrice = millify(cryptoDetails?.price);
 
-  if (isFetching) return "...Loading";
-
-  if (isFetchingCoins) return "...Loading";
+  if (isFetching || isFetchingCoins || coinHistoryFetching) return "...Loading";
+  if (!data || !coinHistory || !coinsData) return "...Loading";
 
   const onChangeSelect = (e) => {
     setCoinId(e);
@@ -49,19 +50,22 @@ const Dashboard = () => {
   const onChangeRadio = ({ target: { value } }) => {
     setTimePeriod(value);
   };
-  const time = ["5", "12"];
+
   return (
     <div className={s.dashboard}>
       <div className={s.wrapper}>
         <CoinsChart
           coinHistory={coinHistory}
           currentPrice={currentPrice}
-          coinName={cryptoDetails.name}
+          coinName={cryptoDetails.symbol}
           radioOptions={radioOptions}
           onChangeRadio={onChangeRadio}
           coinsData={coinsData}
           onChangeSelect={onChangeSelect}
+          coinIcon={cryptoDetails.iconUrl}
+          coinHistoryFetching={coinHistoryFetching}
         />
+
         <CoinsAssets />
       </div>
       <TokensInBalance />
@@ -70,6 +74,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-{
-}
