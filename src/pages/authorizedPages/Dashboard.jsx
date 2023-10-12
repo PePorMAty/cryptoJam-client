@@ -9,6 +9,7 @@ import {
   useGetCryptosQuery,
 } from "../../store/api/cryptoApi";
 import s from "../../styles/authorizedStyles/Dashboard.module.css";
+import Loader from "../../components/Loader";
 
 const radioOptions = [
   { label: "3h", value: "3h" },
@@ -39,9 +40,10 @@ const Dashboard = () => {
   } = useGetCryptosQuery(100);
   const cryptoDetails = data?.data?.coin;
   const currentPrice = millify(cryptoDetails?.price);
+  let isLoader = false;
 
-  if (isFetching || isFetchingCoins || coinHistoryFetching) return "...Loading";
-  if (!data || !coinHistory || !coinsData) return "...Loading";
+  if (isFetching || isFetchingCoins || coinHistoryFetching) return <Loader />;
+  if (!data || !coinHistory || !coinsData) return <Loader />;
 
   const onChangeSelect = (e) => {
     setCoinId(e);
@@ -64,9 +66,8 @@ const Dashboard = () => {
           onChangeSelect={onChangeSelect}
           coinIcon={cryptoDetails.iconUrl}
           coinHistoryFetching={coinHistoryFetching}
+          isLoader={isLoader}
         />
-
-        <CoinsAssets />
       </div>
       <TokensInBalance />
     </div>

@@ -13,9 +13,7 @@ import {
   Filler,
 } from "chart.js";
 import { Radio, Select } from "antd";
-import APY from "../../assets/AuthorizedPages/chartInterestYield.svg";
-import { TbSquareArrowDown, TbSquareArrowUp } from "react-icons/tb";
-import millify from "millify";
+import ChartStats from "./ChartStats";
 
 ChartJS.register(
   CategoryScale,
@@ -39,7 +37,6 @@ const CoinsChart = ({
   onChangeSelect,
   coinsData,
   coinIcon,
-  coinHistoryFetching,
 }) => {
   const coinPrice = [];
   const coinTimestamp = [];
@@ -101,45 +98,16 @@ const CoinsChart = ({
     },
   };
   const onChangeChart = (e) => {
-    if (!e || !data) {
-      return "...Loading";
-    }
     onChangeSelect(e);
   };
 
-  if (coinHistoryFetching) return "...Loading";
-
   return (
     <div className={s.coinsChart}>
-      <div className={s.chartStats}>
-        <div className={s.statsItem}>
-          <div className={s.statsImg}>
-            <img className={s.statsIcon} src={APY} alt="statsIcon" />
-          </div>
-          <div className={s.statsText}>
-            <p className={s.statsTitle}>Interest Yield</p>
-            <span className={s.statsResult}>{coinChange}%</span>
-          </div>
-        </div>
-        <div className={s.statsItem}>
-          <div className={s.statsImg}>
-            <TbSquareArrowUp className={s.statsIcon} />
-          </div>
-          <div className={s.statsText}>
-            <p className={s.statsTitle}>High</p>
-            <span className={s.statsResult}>${millify(maxPrice)}</span>
-          </div>
-        </div>
-        <div className={s.statsItem}>
-          <div className={s.statsImg}>
-            <TbSquareArrowDown className={s.statsIcon} />
-          </div>
-          <div className={s.statsText}>
-            <p className={s.statsTitle}>Low</p>
-            <span className={s.statsResult}>${millify(lowPrice)}</span>
-          </div>
-        </div>
-      </div>
+      <ChartStats
+        lowPrice={lowPrice}
+        maxPrice={maxPrice}
+        coinChange={coinChange}
+      />
       <div className={s.selectWrapper}>
         <Select
           defaultValue={coinName}
@@ -156,6 +124,7 @@ const CoinsChart = ({
           <p className={s.currentPrice}>${currentPrice}</p>
         </div>
       </div>
+
       <Line data={data} options={options} className={s.lineChart} />
       <Radio.Group
         options={radioOptions}

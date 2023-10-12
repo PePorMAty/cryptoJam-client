@@ -4,8 +4,11 @@ import AuthorizedContainer from "./AuthorizedContainer";
 import logo from "../../assets/AuthorizedPages/authLogo.png";
 import avatar from "../../assets/AuthorizedPages/avatar.jpg";
 import { Link } from "react-router-dom";
+import { useCurrentQuery } from "../../store/services/auth";
 
 const AuthorizedHeader = () => {
+  const { data } = useCurrentQuery();
+
   return (
     <header className={s.header}>
       <AuthorizedContainer>
@@ -15,7 +18,7 @@ const AuthorizedHeader = () => {
             <p className={s.logoTitle}>CryptoJam</p>
           </div>
           <Link to={"/profile"} className={s.profile}>
-            <p className={s.name}>Name</p>
+            <p className={s.name}>{data.name}</p>
             <img className={s.avatar} src={avatar} alt="avatar" />
           </Link>
         </div>
