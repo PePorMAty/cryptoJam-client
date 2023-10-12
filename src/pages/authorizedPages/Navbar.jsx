@@ -5,6 +5,7 @@ import { logout } from "../../store/slices/authSlice";
 import dashboardIcon from "../../assets/AuthorizedPages/navIcons/dasboardIcon.svg";
 import logoutIcon from "../../assets/AuthorizedPages/navIcons/logoutIcon.svg";
 import withdrawIcon from "../../assets/AuthorizedPages/navIcons/withdraw.svg";
+import buyMiners from "../../assets/AuthorizedPages/navIcons/BuyMiners.svg";
 import profileIcon from "../../assets/AuthorizedPages/navIcons/profile.svg";
 import s from "../../styles/authorizedStyles/Navbar.module.css";
 
@@ -45,13 +46,13 @@ const Navbar = () => {
               <p className={s.navText}>Withdraw</p>
             </NavLink>
             <NavLink
-              to={"/calculator"}
+              to={"/miners"}
               className={({ isActive }) =>
                 isActive ? `${s.activeLink}` : `${s.navLink}`
               }
             >
-              <img className={s.navIcon} src={dashboardIcon} alt="calculator" />
-              <p className={s.navText}>Calculator</p>
+              <img className={s.navIcon} src={buyMiners} alt="miners" />
+              <p className={s.navText}>Buy Miner</p>
             </NavLink>
             <NavLink
               to={"/profile"}
