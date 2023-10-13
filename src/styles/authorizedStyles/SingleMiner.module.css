@@ -1,0 +1,44 @@
+.singleMiner{
+  margin-bottom: 30px;
+  width: 100%;
+  background: rgba(28, 28, 28, 0.6);
+  backdrop-filter: blur(10px);
+  width: 570px;
+  height: 470px;
+  padding: 40px;
+  border-radius: 16px;
+  margin: 0 auto;
+
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.img{
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+}
+.name{
+  font-size: 36px;
+  margin: 0;
+}
+.increase{
+  font-size: 42px;
+}
+.price{
+  font-size: 36px;
+}
+.nameWrapper{
+  margin-right: 50px;
+}
+.description{
+  font-size: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+.w3Wrapper {
+  margin-top: 70px;
+  display: flex ;
+  justify-content: center ;
+}

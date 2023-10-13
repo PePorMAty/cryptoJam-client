@@ -1,0 +1,14 @@
+.app{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0B0B0F;
+}
+.wrapper{
+  display: flex;
+}
+.container {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

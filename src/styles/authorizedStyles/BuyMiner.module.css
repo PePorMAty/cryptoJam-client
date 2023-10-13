@@ -1,0 +1,96 @@
+.buyMiner{
+  display: flex;
+  margin-bottom: 30px;
+  width: 946px;
+  height: 812px;
+  background: rgba(28, 28, 28, 0.6);
+  backdrop-filter: blur(10px);
+  margin: 0;
+  padding: 40px;
+  border-radius: 16px;
+}
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.minerItem{
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+}
+.preview{
+  display: flex;
+}
+.minerImg{
+  margin-right: 15px;
+}
+.bronze{
+  background: linear-gradient(180deg, #FFA217 0%, rgba(255, 162, 23, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.silver{
+  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gold{
+  background: linear-gradient(180deg, #FFF500 0%, rgba(255, 245, 0, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.platinum{
+  background: linear-gradient(180deg, #0085FF 0%, rgba(0, 133, 255, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.diamond{
+  background: linear-gradient(180deg, #FA00FF 0%, rgba(250, 0, 255, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.legendary{
+  background: linear-gradient(180deg, #F00 0%, rgba(255, 0, 0, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.name{
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+  margin-top: 31px;
+}
+.increase{
+  font-size: 30px;
+  font-weight: 700;
+}
+.description{
+  color: #898CA9;
+  font-size: 16px;
+}
+.buyBtn{
+  margin: 36px auto 0 auto;
+  display: flex;
+  padding: 7px 24px 6px 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--gradient-light, rgba(255, 255, 255, 0.47));
+  background: var(--gradient-main, linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%));
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  transition: all .5s ease;
+  max-width: 70px;
+}
+.buyBtn:hover{
+  opacity: 0.8;
+}
